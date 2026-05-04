@@ -55,12 +55,22 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,246,236,.85);backdro
   .mobile-open .nav .reg{display:inline-flex;position:absolute;top:calc(100% + 230px);left:24px;right:24px;justify-content:center}
 }
 
-/* ===== HERO ===== */.hero {
+.hero::after {
+  content: "";
+  position: absolute;
 
-  background-image: url("images/golden-tree.png");
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: contain; 
+  top: 50%;
+  left: 0; /* or right: 0 if you prefer */
+  transform: translateY(-50%);
+
+  width: 500px;
+  height: 500px;
+
+  background: url("images/golden-tree.png") no-repeat center;
+  background-size: contain;
+
+  opacity: 0.75;
+  pointer-events: none;
 }
 .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;background:linear-gradient(135deg,#fbf6ec,#f3e6c8)}
 .hero::before{content:"";position:absolute;inset:0;background:
